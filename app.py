@@ -17,7 +17,7 @@ def all(path):
     parts = parts._replace(scheme=redirect_parts.scheme)
 
     if parts.netloc.split('.')[0] in INJECT_SUBDOMAINS:
-        parts = parts._replace(path='/{}/{}'.format(parts.netloc.split('.')[0], parts.path))
+        parts = parts._replace(path='/{}{}'.format(parts.netloc.split('.')[0], parts.path))
 
     parts = parts._replace(netloc=redirect_parts.netloc)
 
