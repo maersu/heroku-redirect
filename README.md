@@ -18,6 +18,6 @@ pipenv install --python 3.6
 Run
 
 ```
-export REDIRECT_TO=https://example.com && pipenv run python app.py
+export REDIRECT_TO=https://example.com && export INJECT_SUBDOMAINS='blog, info' pipenv run python app.py
 
 ```
