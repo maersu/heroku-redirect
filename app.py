@@ -35,7 +35,7 @@ def all(path):
             print(query_dict)
             parts = parts._replace(query=urlencode(query_dict))
 
-    return redirect(urlunparse(parts._replace(netloc=redirect_parts.netloc)))
+    return redirect(urlunparse(parts._replace(netloc=redirect_parts.netloc)), code=301)
 
 
 if __name__ == '__main__':
